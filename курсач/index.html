@@ -1,0 +1,133 @@
+<!Doctype html> <!--Doctype сообщает, согласно какому стандарту отображать веб-страницу. Здесь это HTML5 -->
+<html lang = "en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+</head>
+
+<body> 
+	<header>
+		<div class = "logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo.png" alt="Logo"></a>
+		</div>
+
+		<nav>
+			<div class = "topnav">
+				<a href="index.html">HOME</a>
+				<a>Info about auditoriums</a>
+				<a>Records</a>
+				<!-- <a id="menu" href="#" class="icon">&#9776</a> <!-- вызов граф иконки решеточка --> 
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<table>
+			<tr>
+		        <th>Auditorium</th>
+		        <th>Sound from camera</th>
+		        <th>Record now</th>
+		        <th>Record later</th>
+	        </tr>
+	        <tr>
+		        <td>513-MIEM</td>
+		        <td>
+		        	<img class="graficsound" src="img/sound.png" width="20" height="20" alt="Sound">
+		        	<form>
+		        		<select name="cam" size="1">
+		        			<option value="11">11</option>
+		        			<option value="12">12</option>
+		        			<option value="13">13</option>
+		        			<option value="14">14</option>
+		        		</select>
+		        	</form>
+				</td>
+		        <td>
+		        	<form>
+			        	<button>Start</button>
+			        	<button>Stop</button>
+		        	</form>
+		        	<div class="record_now">Recording time:</div>
+		    	</td>
+		        <td>
+			        <form action="https://calendar.google.com/calendar/b/1/r?tab=oc" target="_blank">
+						<button type="submit"><img src="img/clock.png" width="30" height="30" alt="Calendar"></button>
+					</form>
+		    	</td>
+	        </tr>
+	        <tr>
+		        <td>505-FKMD</td>
+		        <td>
+		        	<img clas="graficsound" src="img/sound.png" width="20" height="20" alt="Sound">
+		        		<form>
+		        			<select name="cam" size="1">
+		        				<option value="21">21</option>
+		        				<option value="22">22</option>
+		        				<option value="23">23</option>
+		        				<option value="24">24</option>
+		        			</select>
+		        		</form>
+		        </td>
+		        <td>
+		        	<form>
+		        		<button>Start</button>
+			        	<button>Stop</button>
+		        	</form>
+		        	<div class="record_now">Recording time:</div>
+		        </td>
+		        <td>
+		        	<form action="https://calendar.google.com/calendar/b/1/r?tab=oc" target="_blank">
+						<button type="submit"><img src="img/clock.png" width="30" height="30" alt="Calendar"></button>
+					</form>
+		        </td>
+	        </tr>
+	        <tr>
+		        <td>506-FKND</td>
+		        <td>
+		        	<img clas="graficsound" src="img/sound.png" width="20" height="20" alt="Sound">
+		        		<form>
+		        			<select name="cam" size="1">
+		        				<option value="31">31</option>
+		        				<option value="32">32</option>
+		        				<option value="33">33</option>
+		        				<option value="34">34</option>
+		        			</select>
+		        		</form>
+		        </td>
+		        <td>
+		        	<form>
+		        		<button>Start</button>
+			        	<button>Stop</button>
+		        	</form>
+		        	<div class="record_now">Recording time:</div>
+		        </td>
+		        <td>
+		        	<form action="https://calendar.google.com/calendar/b/1/r?tab=oc" target="_blank">
+						<button type="submit"><img src="img/clock.png" width="30" height="30" alt="Calendar"></button>
+					</form>
+		        </td>
+	        </tr>
+		</table>
+	</main>
+
+	<footer>
+		<div class="f_menu">
+			<ul class="f_list">
+				<li><a>HSE MIEM 2019</a></li>
+			    <li><a>Contacts: hsenvrproject@gmail.com</a></li>
+			    <li><a>About: RTSP Recorder...</</li>
+  			</ul>
+		</div>
+<!-- 		<nav>
+			<a>Contacts: hsenvrproject@gmail.com</a><br>
+			<a>About: RTSP Recorder...</a>
+		</nav> -->
+		<!-- <p>HSE MIEM 2019</p> -->
+	</footer>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
