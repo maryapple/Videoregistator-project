@@ -1,159 +1,182 @@
 <!Doctype html> <!--Doctype сообщает, согласно какому стандарту отображать веб-страницу. Здесь это HTML5 -->
 <html lang = "en">
-<head> 
-	<!-- Мета-тэги, title, link и другие -->
+<head>
 	<meta charset="UTF-8">
 	<title>Project</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
 </head>
 
 <body> 
-	<!-- шапка сайта -->
 	<header>
 		<div class = "logo">
 			<a href="index.html"><img class="graficlogo" src="img/logo.png" alt="Logo"></a>
 		</div>
 
-		<!-- <hr color="#ff0000"> -->
-
-		<!-- MENU -->
 		<nav>
-			<div class = "topnav" id="myTopnav">
+			<div class = "topnav">
 				<a href="index.html">HOME</a>
-				<!-- <a href="info.html">Info about auditoriums</a>
-				<a href="records.html">Records</a> -->
 				<a>Info about auditoriums</a>
 				<a>Records</a>
-				<!-- вызов граф иконки -->
-				<a id="menu" href="#" class="icon">&#9776</a>
+				<a id="menu" href="#" class="icon">&#9776</a> <!-- вызов граф иконки решеточка -->
 			</div>
 		</nav>
 	</header>
+
 	<main>
-		<!-- <hr color="#ff0000"> -->
-		<div class="mytable">
-			<table width="80%">
-				<tr class="titles">
+		<table>
+			<thead>
+				<tr>
 			        <th>Auditorium</th>
-			        <th><div class="cam">Sound from camera</div></th>
+			        <th>Sound source</th>
 			        <th>Record now</th>
 			        <th>Record later</th>
+			        <th>Status</th>
+			        <th>Time</th>
+			        <th>Drive</th>
 		        </tr>
-		        <tr class="audit__513">
+	        </thead>
+	        <tbody>
+		        <tr>
+			        <td>П505-FKMD</td>
+			        <td>
+		        		<form>
+							 <input name="enc_cam" type="radio" value="enc">Encoder
+							 <input name="enc_cam" type="radio" value="cam">Camera
+		        		</form>
+			        </td>
+			        <td>
+			        	<form>
+			        		<button class="btn_start" onclick="record_now_505()">Start</button>
+				        	<button class="btn_stop">Stop</button>
+			        	</form>
+			        </td>
+			        <td>
+			        	<form action="https://calendar.google.com/calendar/b/1/r?tab=oc" target="_blank">
+							<button type="submit"><img src="img/calendar2.png" width="30" height="30" alt="Calendar"></button>
+						</form>
+			        </td>
+			        <td>
+			        	<div class="status">Ready</div>
+			        </td>
+			        <td></td>
+			        <td>
+			        	<form action="https://drive.google.com/drive/u/3/folders/15Ant5hntmfl84Rrkzr9dep2nh13sbXft" target="_blank">
+			        		<button type="submit"><img src="img/drive.svg" width="30" height="30" alt="Calendar"></button>
+			        	</form>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>П500-FKND</td>
+			        <td>
+		        		<form>
+							<input name="enc_cam" type="radio" value="enc">Encoder
+							<input name="enc_cam" type="radio" value="cam">Camera
+			        	</form>
+			        </td>
+			        <td>
+			        	<form>
+			        		<button class="btn_start" onclick="record_now_500()">Start</button>
+				        	<button class="btn_stop">Stop</button>
+			        	</form>
+			        </td>
+			        <td>
+			        	<form action="https://calendar.google.com/calendar/b/1/r?tab=oc" target="_blank">
+							<button type="submit"><img src="img/calendar2.png" width="30" height="30" alt="Calendar"></button>
+						</form>
+			        </td>
+			        <td>
+			        	<div class="status">Ready</div>
+			        </td>
+			        <td></td>
+			        <td>
+			        	<form action="https://drive.google.com/drive/u/3/folders/1EbJg0IzJLP788qWVr0u_Y9SmZ8ygzKwr" target="_blank">
+			        		<button type="submit"><img src="img/drive.svg" width="30" height="30" alt="Calendar"></button>
+			        	</form>
+			        </td>
+		        </tr>
+		        <tr>
+			        <td>С401-FKND</td>
+			        <td>
+		        		<form>
+							 <!-- <p><input name="enc_cam" type="radio" value="enc">Encoder</p>
+							 <p><input name="enc_cam" type="radio" value="cam">Camera</p> -->
+							 <input name="enc_cam" type="radio" value="enc">Encoder
+							 <input name="enc_cam" type="radio" value="cam">Camera
+		        		</form>
+			        </td>
+			        <td>
+			        	<form>
+			        		<button class="btn_start" onclick="record_now_401()">Start</button>
+				        	<button class="btn_stop">Stop</button>
+			        	</form>
+			        </td>
+			        <td>
+			        	<form action="https://calendar.google.com/calendar/b/1/r?tab=oc" target="_blank">
+							<button type="submit"><img src="img/calendar2.png" width="30" height="30" alt="Calendar"></button>
+						</form>
+			        </td>
+			        <td>
+			        	<div class="status">Ready</div>
+			        </td>
+			        <td></td>
+			        <td>
+			        	<form action="https://drive.google.com/drive/u/3/folders/1L4icf2QJsv7dBBDygNNXCG9dOnPwxY9r" target="_blank">
+			        		<button type="submit"><img src="img/drive.svg" width="30" height="30" alt="Calendar"></button>
+			        	</form>
+			        </td>
+		        </tr>
+
+		        <tr>
 			        <td>513-MIEM</td>
 			        <td>
-			        <!-- <div class = "sounds"> -->
-			        		<img clas="graficsound" src="img/sound.png" width="20" height="20" alt="Sound">
-			        		<form>
-			        			<select name="cam" size="1">
-			        				<option value="11">11</option>
-			        				<option value="12">12</option>
-			        				<option value="13">13</option>
-			        				<option value="14">14</option>
-			        			</select>
-			        		</form>
-			        	<!-- </div> -->
-					</td>
+		        		<form>
+							 <!-- <p><input name="enc_cam" type="radio" value="enc">Encoder</p>
+							 <p><input name="enc_cam" type="radio" value="cam">Camera</p> -->
+							 <input name="enc_cam" type="radio" value="enc">Encoder
+							 <input name="enc_cam" type="radio" value="cam">Camera
+		        		</form>
+			        </td>
 			        <td>
 			        	<form>
-			        		<button>
-			        			Start
-			        		</button>
-			        		<button>
-			        			Stop
-			        		</button>
+				        	<button class="btn_start" onclick="record_now_513()">Start</button>
+				        	<button class="btn_stop">Stop</button>
 			        	</form>
-			        	Recording time:
 			    	</td>
-			    	
 			        <td>
-			        	<div class="calendar">
-				        	<button><img src="img/clock.png" width="20" height="20" alt="Calendar"></button>
-				        	<br>Day:<br>Time of record start:<br>Recording time:
-			        	</div>
+				        <form action="https://calendar.google.com/calendar/b/1/r?tab=oc" target="_blank">
+							<button type="submit"><img src="img/calendar2.png" width="30" height="30" alt="Calendar"></button>
+						</form>
 			    	</td>
-		        </tr>
-		        <tr class="audit__505">
-			        <td>505-FKMD</td>
-			        <td>
-			        	<img clas="graficsound" src="img/sound.png" width="20" height="20" alt="Sound">
-			        		<form>
-			        			<select name="cam" size="1">
-			        				<option value="21">21</option>
-			        				<option value="22">22</option>
-			        				<option value="23">23</option>
-			        				<option value="24">24</option>
-			        			</select>
-			        		</form>
+			    	<td>
+			        	<div class="status">Ready</div>
 			        </td>
+			        <td></td>
 			        <td>
-			        	<form>
-			        		<button>
-			        			Start
-			        		</button>
-			        		<button>
-			        			Stop
-			        		</button>
+			        	<form action="https://drive.google.com/drive/u/3/folders/1EkXrlRNtXp-YBF1-8SGanCvZRLThy3e_" target="_blank">
+			        		<button type="submit"><img src="img/drive.svg" width="30" height="30" alt="Calendar"></button>
 			        	</form>
-			        	Recording time:
-			        </td>
-			        <td>
-			        	<div class="calendar">
-				        	<button><img src="img/clock.png" width="20" height="20" alt="Calendar"></button>
-				        	<br>Day:<br>Time of record start:<br>Recording time:
-			        	</div>
 			        </td>
 		        </tr>
-		        <tr class="audit__506">
-			        <td>506-FKND</td>
-			        <td>
-			        	<img clas="graficsound" src="img/sound.png" width="20" height="20" alt="Sound">
-			        		<form>
-			        			<select name="cam" size="1">
-			        				<option value="31">31</option>
-			        				<option value="32">32</option>
-			        				<option value="33">33</option>
-			        				<option value="34">34</option>
-			        			</select>
-			        		</form>
-			        </td>
-			        <td>
-			        	<form>
-			        		<button>
-			        			Start
-			        		</button>
-			        		<button>
-			        			Stop
-			        		</button>
-			        	</form>
-			        	Recording time:
-			        </td>
-			        <td>
-			        	<div class="calendar">
-				        	<button><img src="img/clock.png" width="20" height="20" alt="Calendar"></button>
-				        	<br>Day:<br>Time of record start:<br>Recording time:
-			        	</div>
-			        </td>
-		        </tr>
-			</table>
-		</div>
+	        </tbody>
+		</table>
 
-		<!-- <hr color="#ff0000"> -->
+		<!-- <script>
+			alert('hi');
+		</script> -->
 	</main>
+
 	<footer>
-		<nav>
-				<a href="index.html">HOME</a>
-				<!-- <a href="about.html">About</a> -->
-				<a>About</a>
-		</nav>
-		<div class="logo">
-			<a href="index.html"><img class="graficlogo" src="img/logo.png" alt=""></a>
+		<div class="f_menu">
+			<ul class="f_list">
+				<li><a>HSE MIEM 2019</a></li>
+			    <li><a>Contacts: hsenvrproject@gmail.com</a></li>
+			    <li><a>About: RTSP Recorder...</</li>
+  			</ul>
 		</div>
-		<p>Moscow 2019</p>
 	</footer>
-	<!-- все html-тэги для структуры сайта -->
+
 	<script src="js/script.js"></script>
-	<!-- <p>Just text </p> -->
 </body>
 </html>
