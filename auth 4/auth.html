@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous"></script>
+	<script src="semantic/dist/semantic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"
+            integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+          integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q="
+          crossorigin="anonymous"/>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+
+	<style>
+		body > .grid {
+			height: 100%;
+		}
+
+		.image {
+			margin-top: -100px;
+		}
+
+		.column {
+			max-width: 450px;
+		}
+
+		.content{
+			color: black;
+		}
+	</style>
+
+
+</head>
+<body>
+	<div class="ui middle aligned center aligned grid">
+		<div class="column">
+			<h2 class="ui teal image header">
+				<div class="content">
+					Вход в аккаунт
+				</div>
+			</h2>
+
+			<form class="ui large form">
+				<div class="ui stacked segment">
+					<div class="field">
+						<div class="ui left icon input">
+							<i class="user icon"></i>
+							<input type="text" name="login" id="login" placeholder="Имя пользователя">
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui left icon input">
+							<i class="lock icon"></i>
+							<input type="password" name="password" id="password" placeholder="Пароль">
+						</div>
+					</div>
+					<div class="ui fluid large black submit button">Войти</div>
+					
+				</div>
+
+				<div class="ui error message"></div>
+			</form>
+		</div>
+	</div>
+
+	<script>
+	$(document).ready(function() {
+		$('.ui.form')
+		.form({
+			fields: {
+				login: {
+					identifier  : 'login',
+					rules: [
+						{
+							type   : 'empty',
+							prompt : 'Пожалуйста, введите имя пользователя'
+						},
+						{
+							type   : 'login',
+							prompt : 'Пожалуйста, введите корректное имя пользователя'
+						}
+					]
+				},
+				password: {
+					identifier  : 'password',
+					rules: [
+						{
+							type   : 'empty',
+							prompt : 'Пожалуйста, введите пароль'
+						},
+						{
+							type   : 'length[6]',
+							prompt : 'В пароле должно быть как минимум 6 символов'
+						}
+					]
+				}
+			}
+		});
+	});
+
+	$('.button').click(function(){
+		var l = $("#login").val();
+		var p = $("#password").val();
+		if (l == 'hsenvr' && p == '1337')
+			window.open('index.html');
+		else if (l == '' || p == '')
+			$(document).ready(function(){});
+	});
+	</script>
+</body>
+</html>
